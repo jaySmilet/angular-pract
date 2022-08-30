@@ -16,6 +16,7 @@ import { DynamicTableComponent } from './dynamic-table/dynamic-table.component';
 import { TempRefComponent } from './temp-ref/temp-ref.component';
 import { NgContainerComponent } from './ng-container/ng-container.component';
 import { NgTempComponent } from './ng-temp/ng-temp.component';
+import { NgTempChildComponent } from './ng-temp/ng-temp-child/ng-temp-child.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule],
@@ -33,6 +34,7 @@ import { NgTempComponent } from './ng-temp/ng-temp.component';
     TempRefComponent,
     NgContainerComponent,
     NgTempComponent,
+    NgTempChildComponent,
   ],
   bootstrap: [AppComponent],
 })

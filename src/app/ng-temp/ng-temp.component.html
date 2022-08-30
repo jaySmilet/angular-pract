@@ -1,6 +1,47 @@
-<ng-template #temp1>
+<ng-template let-value="value" let-message="messageVar" #temp1>
   <p>This is our temp1</p>
+  <p>Value Received from the Parent is {{ value }}</p>
+  <p>Message Received from the Parent is {{ message }}</p>
 </ng-template>
 
-<ng-container *ngTeplateOutlet="temp1"></ng-container>
-<div *ngTeplateOutlet="temp1"></div>
+<!-- <ng-container *ngTeplateOutlet="temp1"></ng-container>
+<div *ngTeplateOutlet="temp1">
+  <div></div>
+</div> -->
+
+<ng-template
+  [ngTemplateOutlet]="temp1"
+  [ngTemplateOutletContext]="{ value: '-1000', messageVar: '-I am message' }"
+>
+  <div></div>
+</ng-template>
+
+-----------------------------------------------------------------
+
+<ng-template let-person="personVar" #temp2>
+  <p>name-{{ person.name }}</p>
+  <p>surname-{{ person.surname }}</p>
+</ng-template>
+
+<ng-template
+  [ngTemplateOutlet]="temp2"
+  [ngTemplateOutletContext]="{ personVar: { name: 'jk', surname: 'kl' } }"
+>
+</ng-template>
+
+<ng-template let-shauk let-shaukiya="shaukiyaVar" #temp3>
+  <p>shauk-{{shauk}}</p>
+  <p>shaukiya-1-{{shaukiya.icha}}</p>
+  <p>shaukiya-2-{{shaukiya.anicha}}</p>
+</ng-template>
+
+<ng-template [ngTemplateOutlet]="temp3" [ngTemplateOutletContext]="{$implicit:'nothing',shaukiyaVar:{icha:'shaukeen budhiya',anicha:'Chatai ka lahnga'}}">
+</ng-template>
+
+-------------------------------------------------------
+Passing to child
+
+<ng-template #parentTemplate>
+</ng-template>
+
+<app-ng-temp-child [customTemplate]="parentTemplate"></app-ng-temp-child>
