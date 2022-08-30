@@ -1,0 +1,52 @@
+<div>
+  <app-btn></app-btn> <br /><br />
+  <app-btn></app-btn>
+</div>
+<br />
+<div>
+  <app-fancy-btn (someEvent)="myEvent($event)">Click Me</app-fancy-btn>
+</div>
+<br />
+<div>
+  <app-fancy-btn (click)="btnClick($event)"><b>Submit</b></app-fancy-btn>
+</div>
+<br />
+
+<!-- <div>
+  <app-card>
+    <header><h2>I am here1</h2></header>
+    <content><p>I am content1</p></content>
+    <footer><p>I am footer1</p></footer>
+  </app-card>
+</div>
+<br />
+
+<div>
+  <app-card>
+    <header><h2>I am here2</h2></header>
+    <content><p>I am content2</p></content>
+    <footer><p>I am footer2</p></footer>
+  </app-card>
+</div> -->
+
+<!-- <div>
+  <app-card>
+    <div class="header"><h2>I am here2</h2></div>
+    <div class="content"><p>I am content2</p></div>
+    <div class="footer"><p>I am footer2</p></div>
+    <p>
+      This is not going to be shown unless you don't write ng-content without
+      selector.
+    </p>
+  </app-card>
+</div> -->
+
+<div>
+  <app-card>
+    <ng-container ngProjectAs="header">
+      <div><h2>I am here3</h2></div>
+    </ng-container>
+    <div class="content"><p>I am content3</p></div>
+    <div class="footer"><p>I am footer3</p></div>
+  </app-card>
+</div>

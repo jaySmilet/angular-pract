@@ -1,0 +1,9 @@
+.center {
+  text-align: center;
+  margin: 1rem auto;
+}
+tr,
+th {
+  border: 1px solid;
+  border-collapse: separate;
+}

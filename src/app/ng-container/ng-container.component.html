@@ -1,0 +1,11 @@
+<!-- <ul>
+  <span *ngFor="let item of items">
+    <li *ngIf="item.active">{{ item.name }}</li>
+  </span>
+</ul> -->
+
+<ul>
+  <ng-container *ngFor="let item of items">
+    <li *ngIf="item.active">{{ item.name }}</li>
+  </ng-container>
+</ul>

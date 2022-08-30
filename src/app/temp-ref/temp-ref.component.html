@@ -1,0 +1,13 @@
+<h2>Variable Scope</h2>
+<div *ngIf="false; else elseTemp">IF</div>
+
+<ng-template #elseTemp>
+  <p>
+    <label for="address">Address</label>
+    <input type="text" (keyup)="(0)" #address />
+  </p>
+  <p>{{ address.value }}</p>
+</ng-template>
+
+<!-- Address is not accessible outside -->
+<!-- <p>{{address?.value}}</p> -->
