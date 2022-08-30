@@ -30,18 +30,56 @@
 </ng-template>
 
 <ng-template let-shauk let-shaukiya="shaukiyaVar" #temp3>
-  <p>shauk-{{shauk}}</p>
-  <p>shaukiya-1-{{shaukiya.icha}}</p>
-  <p>shaukiya-2-{{shaukiya.anicha}}</p>
+  <p>shauk-{{ shauk }}</p>
+  <p>shaukiya-1-{{ shaukiya.icha }}</p>
+  <p>shaukiya-2-{{ shaukiya.anicha }}</p>
 </ng-template>
 
-<ng-template [ngTemplateOutlet]="temp3" [ngTemplateOutletContext]="{$implicit:'nothing',shaukiyaVar:{icha:'shaukeen budhiya',anicha:'Chatai ka lahnga'}}">
+<ng-template
+  [ngTemplateOutlet]="temp3"
+  [ngTemplateOutletContext]="{
+    $implicit: 'nothing',
+    shaukiyaVar: { icha: 'shaukeen budhiya', anicha: 'Chatai ka lahnga' }
+  }"
+>
 </ng-template>
 
--------------------------------------------------------
-Passing to child
+------------------------------------------------------- Passing to child
 
 <ng-template #parentTemplate>
+  <p>This Template is defined in Parent. We will send it to child component</p>
 </ng-template>
 
 <app-ng-temp-child [customTemplate]="parentTemplate"></app-ng-temp-child>
+--------------------------------------------------------------------------------
+<br />
+<h4>ng-template with ngIf</h4>
+<label> <input type="checkbox" [(ngModel)]="selected" />Select Me </label>
+<!-- <div *ngIf="selected">
+  <p>You are selected.</p>
+</div> -->
+<ng-template [ngIf]="selected">
+  <div>
+    <p>You are selected.</p>
+  </div>
+</ng-template>
+<br />
+<h4>ng-template with ngIf, then & else</h4>
+<div *ngIf="selected; then thenBlock1; else elseBlock1">
+  <p>This content is not shown</p>
+</div>
+
+<ng-template #thenBlock1>
+  <p>content to render when the selected is true.</p>
+</ng-template>
+
+<ng-template #elseBlock1>
+  <p>content to render when selected is false.</p>
+</ng-template>
+<br>
+---------------------------------------------------------------------Pure
+Ng-Template
+<ng-template #sayHelloTemplate>
+  <p>Say Hello</p>
+</ng-template>
+<br />
