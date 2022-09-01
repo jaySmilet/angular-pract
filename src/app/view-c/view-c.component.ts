@@ -13,18 +13,18 @@ import { ViewChComponent } from './view-ch/view-ch.component';
   styleUrls: ['./view-c.component.css'],
 })
 export class ViewCComponent implements OnInit, AfterViewInit {
-  // @ViewChild(ViewChComponent, { static: true }) child: ViewChComponent;
-  @ViewChild('usingChildTemRef', { static: true }) child: ViewChComponent;
+  @ViewChild(ViewChComponent, { static: false }) child: ViewChComponent;
+  // @ViewChild('usingChildTemRef', { static: true }) child: ViewChComponent;
   @ViewChild('tempRef', { static: false }) tempRef: ElementRef;
-  showCounter:true;
-  constructor() {
-  }
+  // @ViewChild('nameInput',{static:false}) nameVar;
+  showCounter: true;
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   increment() {
     this.child.increment();
+    console.log(this.child);
   }
 
   decrement() {
