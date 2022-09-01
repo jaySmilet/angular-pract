@@ -1,1 +1,16 @@
-<app-view-ch></app-view-ch>
+<input
+  type="checkbox"
+  id="showCounter"
+  name="showCounter"
+  [(ngModel)]="showCounter"
+/>
+<p>{{ showCounter }}</p>
+<ng-container *ngIf="showCounter">
+  <p>Current Count is {{ child?.count }}</p>
+  <button (click)="increment()">++</button>
+  <button (click)="decrement()">--</button>
+  <br />
+  <app-view-ch #usingChildTemRef></app-view-ch>
+</ng-container>
+<br />
+<input type="password" value="12345" #tempRef />
