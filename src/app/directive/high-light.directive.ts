@@ -24,3 +24,5 @@ export class HighLightDirective implements OnInit {
     console.log('mouse leave');
   }
 }
+
+// Source:- https://www.tektutorialshub.com/angular/hostbinding-and-hostlistener-in-angular/

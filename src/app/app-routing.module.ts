@@ -8,6 +8,7 @@ import { MultiStepComponent } from './multi-step/multi-step.component';
 import { NgContainerComponent } from './ng-container/ng-container.component';
 import { NgTempComponent } from './ng-temp/ng-temp.component';
 import { TempRefComponent } from './temp-ref/temp-ref.component';
+import { ViewCComponent } from './view-c/view-c.component';
 
 const routes: Routes = [
   {
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path: 'ng-t',
     component: NgTempComponent,
+  },
+  {
+    path: 'v-c',
+    component: ViewCComponent,
   },
 ];
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -42,6 +42,14 @@ export class LoginComponent implements OnInit {
   resetF() {
     this.form.reset();
     console.log(this.form.value);
+  }
+
+  // How to use HostBinding in Components
+  @HostBinding('class') get class() {
+    return 'login';
+  }
+  @HostBinding('class.box') get hasBox() {
+    return true;
   }
 }
 
