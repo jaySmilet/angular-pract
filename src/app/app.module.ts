@@ -20,6 +20,7 @@ import { NgTempChildComponent } from './ng-temp/ng-temp-child/ng-temp-child.comp
 import { HighLightDirective } from './directive/high-light.directive';
 import { ApplyClassDirective } from './directive/apply-class.directive';
 import { ViewCComponent } from './view-c/view-c.component';
+import { ViewChComponent } from './view-c/view-ch/view-ch.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule],
@@ -41,6 +42,7 @@ import { ViewCComponent } from './view-c/view-c.component';
     HighLightDirective,
     ApplyClassDirective,
     ViewCComponent,
+    ViewChComponent,
   ],
   bootstrap: [AppComponent],
 })
