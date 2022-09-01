@@ -18,6 +18,7 @@ import { NgContainerComponent } from './ng-container/ng-container.component';
 import { NgTempComponent } from './ng-temp/ng-temp.component';
 import { NgTempChildComponent } from './ng-temp/ng-temp-child/ng-temp-child.component';
 import { HighLightDirective } from './directive/high-light.directive';
+import { ApplyClassDirective } from './directive/apply-class.directive';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule],
@@ -37,6 +38,7 @@ import { HighLightDirective } from './directive/high-light.directive';
     NgTempComponent,
     NgTempChildComponent,
     HighLightDirective,
+    ApplyClassDirective
   ],
   bootstrap: [AppComponent],
 })
